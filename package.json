@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/EdilsonRogerioCuambe/projeto-04#readme",
   "devDependencies": {
+    "@rocketseat/eslint-config": "2.1.0",
     "@types/node": "20.5.7",
-    "typescript": "5.2.2"
+    "eslint": "8.48.0",
+    "typescript": "5.2.2",
+    "vitest": "0.34.3"
   }
 }
