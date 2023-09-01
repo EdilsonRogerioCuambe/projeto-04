@@ -16,6 +16,8 @@ test('create an answer for a question', async () => {
     content: 'Answer content',
     instructorId: 'instructor-id',
     questionId: 'question-id',
+    upvotes: 0,
+    downvotes: 0,
   })
 
   expect(answer.content).toEqual('Answer content')
