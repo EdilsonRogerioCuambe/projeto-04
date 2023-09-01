@@ -17,6 +17,51 @@ export class Answer extends Entity<AnswerProps> {
     return this.props.content
   }
 
+  set content(content: string) {
+    this.props.content = content
+    this.touch()
+  }
+
+  get upvotes() {
+    return this.props.upvotes
+  }
+
+  set upvotes(upvotes: number) {
+    this.props.upvotes = upvotes
+  }
+
+  get downvotes() {
+    return this.props.downvotes
+  }
+
+  set downvotes(downvotes: number) {
+    this.props.downvotes = downvotes
+  }
+
+  get authorId() {
+    return this.props.authorId
+  }
+
+  get questionId() {
+    return this.props.questionId
+  }
+
+  get createdAt() {
+    return this.props.createdAt
+  }
+
+  get updatedAt() {
+    return this.props.updatedAt
+  }
+
+  private touch() {
+    this.props.updatedAt = new Date()
+  }
+
+  get except() {
+    return this.content.substring(0, 100).trimEnd().concat('...')
+  }
+
   static create(
     props: Optional<AnswerProps, 'createdAt'>,
     id?: UniqueEntityID,
